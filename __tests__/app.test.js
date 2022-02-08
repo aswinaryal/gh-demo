@@ -12,11 +12,4 @@ describe('App Test', () => {
       .expect('Content-Type', /json/)
       .expect(200, done);
   });
-
-  it('fails the app', (done) => {
-    request(app)
-      .get('/api/health')
-      .expect('Content-Type', /json/)
-      .expect(401, done);
-  });
 });
